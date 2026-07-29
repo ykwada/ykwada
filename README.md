@@ -16,5 +16,3 @@ Algorithms & Data Structures / Apache Airflow / Spark
 **Background**  
 4+ years building data platforms for companies
 across construction, automotive, and HR industries in Japan.
-
-<img src="https://github-stats-extended.vercel.app/api?username=ykwada&theme=radical" alt="Top Languages" /></p>
