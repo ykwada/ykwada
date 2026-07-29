@@ -17,8 +17,4 @@ Algorithms & Data Structures / Apache Airflow / Spark
 4+ years building data platforms for companies
 across construction, automotive, and HR industries in Japan.
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=ykwada&show_icons=true&locale=ja&layout=compact&theme=chartreuse-dark" alt="Top Languages" /></p>
-
-<img src="https://github-readme-stats.vercel.app/api?username=ykwada&show_icons=true&locale=ja&theme=chartreuse-dark" alt="GitHub Stats" width="410" /></p>
-
-<img src="https://github-profile-trophy.vercel.app/?username=ykwada&theme=juicyfresh&no-bg=true" />
+https://github-stats-extended.vercel.app/api?username=ykwada&theme=radical
