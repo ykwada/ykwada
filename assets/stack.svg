@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="236" viewBox="0 0 760 236" role="img" aria-label="Most used languages">
+<style>text{font-variant-ligatures:none}@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<rect x="0.5" y="0.5" width="759" height="235" rx="12" fill="#0d1117" stroke="#30363d"/>
+<text x="28.0" y="38.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#f0f6fc" text-anchor="start">CODE DISTRIBUTION</text>
+<text x="28.0" y="61.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#8b949e" text-anchor="start">Based on language bytes across selected public repositories</text>
+<text x="28.0" y="99.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Python</text>
+<rect x="160" y="87" width="500" height="14" rx="7" fill="#21262d"/>
+<rect x="160" y="87" width="499.8" height="14" rx="7" fill="#3572A5"/>
+<text x="724.0" y="99.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">100.0%</text>
+<text x="28.0" y="141.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Dockerfile</text>
+<rect x="160" y="129" width="500" height="14" rx="7" fill="#21262d"/>
+<rect x="160" y="129" width="2.0" height="14" rx="7" fill="#384d54"/>
+<text x="724.0" y="141.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">0.0%</text>
+<text x="28.0" y="183.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Procfile</text>
+<rect x="160" y="171" width="500" height="14" rx="7" fill="#21262d"/>
+<rect x="160" y="171" width="2.0" height="14" rx="7" fill="#3B2F63"/>
+<text x="724.0" y="183.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">0.0%</text>
+</svg>
