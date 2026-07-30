@@ -1,18 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="236" viewBox="0 0 760 236" role="img" aria-label="Most used languages">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="362" viewBox="0 0 760 362" role="img" aria-label="Most used languages">
 <style>text{font-variant-ligatures:none}@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
-<rect x="0.5" y="0.5" width="759" height="235" rx="12" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="759" height="361" rx="12" fill="#0d1117" stroke="#30363d"/>
 <text x="28.0" y="38.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#f0f6fc" text-anchor="start">CODE DISTRIBUTION</text>
-<text x="28.0" y="61.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#8b949e" text-anchor="start">Based on language bytes across selected public repositories</text>
-<text x="28.0" y="99.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Python</text>
+<text x="28.0" y="61.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#8b949e" text-anchor="start">Based on language bytes across selected accessible repositories</text>
+<text x="28.0" y="99.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">PHP</text>
 <rect x="160" y="87" width="500" height="14" rx="7" fill="#21262d"/>
-<rect x="160" y="87" width="499.8" height="14" rx="7" fill="#3572A5"/>
-<text x="724.0" y="99.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">100.0%</text>
-<text x="28.0" y="141.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Dockerfile</text>
+<rect x="160" y="87" width="382.7" height="14" rx="7" fill="#4F5D95"/>
+<text x="724.0" y="99.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">76.5%</text>
+<text x="28.0" y="141.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">JavaScript</text>
 <rect x="160" y="129" width="500" height="14" rx="7" fill="#21262d"/>
-<rect x="160" y="129" width="2.0" height="14" rx="7" fill="#384d54"/>
-<text x="724.0" y="141.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">0.0%</text>
-<text x="28.0" y="183.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Procfile</text>
+<rect x="160" y="129" width="94.6" height="14" rx="7" fill="#f1e05a"/>
+<text x="724.0" y="141.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">18.9%</text>
+<text x="28.0" y="183.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">TypeScript</text>
 <rect x="160" y="171" width="500" height="14" rx="7" fill="#21262d"/>
-<rect x="160" y="171" width="2.0" height="14" rx="7" fill="#3B2F63"/>
-<text x="724.0" y="183.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">0.0%</text>
+<rect x="160" y="171" width="12.6" height="14" rx="7" fill="#3178c6"/>
+<text x="724.0" y="183.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">2.5%</text>
+<text x="28.0" y="225.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Python</text>
+<rect x="160" y="213" width="500" height="14" rx="7" fill="#21262d"/>
+<rect x="160" y="213" width="3.8" height="14" rx="7" fill="#3572A5"/>
+<text x="724.0" y="225.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">0.8%</text>
+<text x="28.0" y="267.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">Visual Basic 6.0</text>
+<rect x="160" y="255" width="500" height="14" rx="7" fill="#21262d"/>
+<rect x="160" y="255" width="3.2" height="14" rx="7" fill="#2c6353"/>
+<text x="724.0" y="267.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">0.6%</text>
+<text x="28.0" y="309.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#c9d1d9" text-anchor="start">SCSS</text>
+<rect x="160" y="297" width="500" height="14" rx="7" fill="#21262d"/>
+<rect x="160" y="297" width="2.9" height="14" rx="7" fill="#c6538c"/>
+<text x="724.0" y="309.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8b949e" text-anchor="end">0.6%</text>
 </svg>
