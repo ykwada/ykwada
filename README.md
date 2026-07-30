@@ -21,7 +21,7 @@ across construction, automotive, and HR industries in Japan.
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/stack.svg"
+    src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/stack.svg?v=2"
     alt="Code distribution"
     width="100%"
   />
@@ -31,7 +31,7 @@ across construction, automotive, and HR industries in Japan.
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/activity.svg"
+    src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/activity.svg?v=2"
     alt="GitHub development activity"
     width="100%"
   />
