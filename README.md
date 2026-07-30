@@ -1,8 +1,14 @@
+<div align="center">
+
 ## Hi, I'm Y. Wada 👋
 
 System & Data Engineer based in Tokyo.  
 Experienced in building data pipelines, BI dashboards, 
 and ETL workflows across multiple industries.
+
+</div>
+
+---
 
 **Core skills（Data Engineering）**
 Python / SQL / AWS / ETL / Data Modeling
@@ -17,22 +23,21 @@ Algorithms & Data Structures / Apache Airflow / Spark
 4+ years building data platforms for companies
 across construction, automotive, and HR industries in Japan.
 
-## Code Distribution
+---
+
+## 🛠 Tech Stack
 
 <p align="center">
-  <img
-    src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/stack.svg?v=2"
-    alt="Code distribution"
-    width="100%"
-  />
+  <img src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/stack.svg?v=3" width="100%" alt="Code Distribution"/>
 </p>
 
-## Development Activity
+---
+
+## 📈 GitHub Activity
 
 <p align="center">
-  <img
-    src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/activity.svg?v=2"
-    alt="GitHub development activity"
-    width="100%"
-  />
+  <img src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/activity.svg?v=3" width="100%" alt="GitHub Activity"/>
 </p>
+
+---
+

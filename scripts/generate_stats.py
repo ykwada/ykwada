@@ -13,10 +13,8 @@ Required environment variables:
 Optional environment variables:
     INCLUDE_FORKS          "true" to include forked repositories. Default: false
     INCLUDE_ARCHIVED       "true" to include archived repositories. Default: false
-    INCLUDE_PRIVATE        "true" to include private repositories when the
-                           token has permission. Default: false
-    INCLUDE_ORG_REPOS       "true" to include organization/collaborator
-                           repositories. Default: true
+    INCLUDE_PRIVATE        "true" to include private repository contributions
+                           when the token has permission. Default: false
     EXCLUDED_REPOS         Comma-separated repository names to exclude.
     EXCLUDED_LANGUAGES     Comma-separated languages to exclude.
                            Default: HTML,CSS,Shell
@@ -169,18 +167,11 @@ def fetch_profile_data(
     username: str,
     token: str,
     include_private: bool,
-    include_org_repos: bool,
 ) -> dict[str, Any]:
-    """
-    Fetch contribution totals and every repository visible to the token.
-
-    Public/private filtering is performed in Python because omitting GitHub's
-    `privacy` argument allows the same query to return both kinds of repositories.
-    """
     start, end = get_date_range()
 
-    contribution_query = """
-    query ProfileContributions(
+    query = """
+    query ProfileStats(
       $login: String!,
       $from: DateTime!,
       $to: DateTime!
@@ -188,7 +179,35 @@ def fetch_profile_data(
       user(login: $login) {
         login
         name
-        contributionsCollection(from: $from, to: $to) {
+        repositories(
+          first: 100,
+          ownerAffiliations: OWNER,
+          privacy: PUBLIC,
+          orderBy: {field: UPDATED_AT, direction: DESC}
+        ) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          nodes {
+            name
+            isFork
+            isArchived
+            languages(first: 20, orderBy: {field: SIZE, direction: DESC}) {
+              edges {
+                size
+                node {
+                  name
+                  color
+                }
+              }
+            }
+          }
+        }
+        contributionsCollection(
+          from: $from,
+          to: $to
+        ) {
           totalCommitContributions
           totalPullRequestContributions
           totalIssueContributions
@@ -208,9 +227,9 @@ def fetch_profile_data(
     }
     """
 
-    contribution_data = graphql_request(
+    data = graphql_request(
         token,
-        contribution_query,
+        query,
         {
             "login": username,
             "from": iso_utc(start),
@@ -218,88 +237,17 @@ def fetch_profile_data(
         },
     )
 
-    user = contribution_data.get("user")
+    user = data.get("user")
     if not user:
         raise GitHubAPIError(f"GitHub user '{username}' was not found.")
 
-    affiliations = (
-        "[OWNER, ORGANIZATION_MEMBER, COLLABORATOR]"
-        if include_org_repos
-        else "[OWNER]"
-    )
-
-    repository_query = f"""
-    query ProfileRepositories(
-      $login: String!,
-      $after: String
-    ) {{
-      user(login: $login) {{
-        repositories(
-          first: 100,
-          after: $after,
-          ownerAffiliations: {affiliations},
-          orderBy: {{field: UPDATED_AT, direction: DESC}}
-        ) {{
-          pageInfo {{
-            hasNextPage
-            endCursor
-          }}
-          nodes {{
-            name
-            nameWithOwner
-            isFork
-            isArchived
-            isPrivate
-            languages(first: 20, orderBy: {{field: SIZE, direction: DESC}}) {{
-              edges {{
-                size
-                node {{
-                  name
-                  color
-                }}
-              }}
-            }}
-          }}
-        }}
-      }}
-    }}
-    """
-
-    repositories: list[dict[str, Any]] = []
-    cursor: str | None = None
-
-    while True:
-        repository_data = graphql_request(
-            token,
-            repository_query,
-            {
-                "login": username,
-                "after": cursor,
-            },
+    if user["repositories"]["pageInfo"]["hasNextPage"]:
+        print(
+            "Warning: more than 100 public repositories were found. "
+            "Only the 100 most recently updated repositories are included.",
+            file=sys.stderr,
         )
 
-        repository_user = repository_data.get("user")
-        if not repository_user:
-            raise GitHubAPIError(f"GitHub user '{username}' was not found.")
-
-        connection = repository_user["repositories"]
-
-        for repository in connection["nodes"]:
-            if repository["isPrivate"] and not include_private:
-                continue
-            repositories.append(repository)
-
-        page_info = connection["pageInfo"]
-        if not page_info["hasNextPage"]:
-            break
-
-        cursor = page_info["endCursor"]
-        if not cursor:
-            raise GitHubAPIError(
-                "GitHub reported another repository page but returned no cursor."
-            )
-
-    user["repositories"] = {"nodes": repositories}
     return user
 
 
@@ -435,7 +383,7 @@ def render_stack_svg(
         svg_text(
             28,
             61,
-            "Based on language bytes across selected accessible repositories",
+            "Based on language bytes across selected public repositories",
             size=12,
             fill=theme.muted,
         )
@@ -633,9 +581,9 @@ def render_activity_svg(
                 )
             )
 
-    footer = "Authenticated GitHub activity"
+    footer = "Public activity"
     if restricted:
-        footer += f" · {restricted:,} restricted contributions"
+        footer += f" · {restricted:,} private contributions are hidden"
     svg.append(svg_text(28, 368, footer, size=11, fill=theme.muted))
     svg.append("</svg>")
     return "\n".join(svg)
@@ -662,7 +610,6 @@ def main() -> int:
     include_forks = env_bool("INCLUDE_FORKS")
     include_archived = env_bool("INCLUDE_ARCHIVED")
     include_private = env_bool("INCLUDE_PRIVATE")
-    include_org_repos = env_bool("INCLUDE_ORG_REPOS", True)
     excluded_repos = env_csv("EXCLUDED_REPOS")
     excluded_languages = env_csv("EXCLUDED_LANGUAGES", "HTML,CSS,Shell")
 
@@ -682,12 +629,7 @@ def main() -> int:
         return 2
 
     try:
-        user = fetch_profile_data(
-            username,
-            token,
-            include_private,
-            include_org_repos,
-        )
+        user = fetch_profile_data(username, token, include_private)
     except GitHubAPIError as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
