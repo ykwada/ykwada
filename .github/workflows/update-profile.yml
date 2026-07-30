@@ -24,10 +24,21 @@ jobs:
 
       - name: Generate profile stats
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
           GH_USERNAME: ${{ github.repository_owner }}
-        run: |
-          python scripts/generate_stats.py
+
+          INCLUDE_PRIVATE: "true"
+          INCLUDE_ORG_REPOS: "true"
+
+          CARD_THEME: dark
+          TOP_LANGUAGES: "6"
+          INCLUDE_FORKS: "false"
+          INCLUDE_ARCHIVED: "false"
+
+          EXCLUDED_LANGUAGES: HTML,CSS,Shell
+          EXCLUDED_REPOS: ykwada
+
+        run: python scripts/generate_stats.py
 
       - name: Commit generated assets
         run: |
