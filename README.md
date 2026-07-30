@@ -16,3 +16,23 @@ Algorithms & Data Structures / Apache Airflow / Spark
 **Background**  
 4+ years building data platforms for companies
 across construction, automotive, and HR industries in Japan.
+
+## Code Distribution
+
+<p align="center">
+  <img
+    src="./assets/stack.svg"
+    alt="Code distribution"
+    width="100%"
+  />
+</p>
+
+## Development Activity
+
+<p align="center">
+  <img
+    src="./assets/activity.svg"
+    alt="GitHub development activity"
+    width="100%"
+  />
+</p>
