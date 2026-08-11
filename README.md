@@ -76,9 +76,10 @@
 ### Studying
 
 <p align="center">
-  <img height="28" src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" />
-  <img height="28" src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" />
-  <img height="28" src="https://img.shields.io/badge/Algorithms%20%26%20Data%20Structures-8A2BE2?style=for-the-badge&logo=leetcode&logoColor=white" />
+  <img height="24" src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
+  <img height="24" src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" />
+  <img height="24" src="https://img.shields.io/badge/dbt-FF694A?style=flat-square&labelColor=FF694A" />
+  <img height="24" src="https://img.shields.io/badge/Algorithms%20%26%20Data%20Structures-8A2BE2?style=flat-square&logo=leetcode&logoColor=white" />
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
