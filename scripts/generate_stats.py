@@ -565,31 +565,13 @@ def render_activity_svg(
             f'stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
         )
 
-        peak = max(item["count"] for item in monthly)
-
         for (x, y), item in zip(points, monthly):
-            is_peak = item["count"] == peak and peak > 0
             svg.append(
-                f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{5 if is_peak else 3.5}" '
-                f'fill="{theme.accent if is_peak else theme.background}" '
-                f'stroke="{theme.accent}" stroke-width="2">'
+                f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" '
+                f'fill="{theme.background}" stroke="{theme.accent}" stroke-width="2">'
                 f"<title>{escape(item['label'])}: {item['count']} contributions</title>"
                 "</circle>"
             )
-            # Values that barely register against the peak add noise rather than
-            # information, so only label the months that carry the shape.
-            if item["count"] and item["count"] >= peak * 0.05:
-                svg.append(
-                    svg_text(
-                        x,
-                        y - 13,
-                        f"{item['count']:,}",
-                        size=11,
-                        fill=theme.title if is_peak else theme.text,
-                        weight=700 if is_peak else 600,
-                        anchor="middle",
-                    )
-                )
             svg.append(
                 svg_text(
                     x,
