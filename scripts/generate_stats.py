@@ -71,7 +71,7 @@ THEMES = {
         text="#c9d1d9",
         muted="#8b949e",
         accent="#58a6ff",
-        grid="#21262d",
+        grid="#39414d",
         bar_background="#21262d",
     ),
     "light": Theme(
@@ -514,9 +514,12 @@ def render_activity_svg(
         fraction = step / 4
         y = chart_bottom - chart_height * fraction
         value = round(maximum * fraction)
+        baseline = step == 0
         svg.append(
             f'<line x1="{chart_left}" y1="{y:.1f}" x2="{chart_right}" y2="{y:.1f}" '
-            f'stroke="{theme.grid}" stroke-width="1"/>'
+            f'stroke="{theme.border if baseline else theme.grid}" stroke-width="1"'
+            + ("" if baseline else ' stroke-dasharray="3 4"')
+            + "/>"
         )
         svg.append(
             svg_text(
@@ -551,8 +554,8 @@ def render_activity_svg(
         svg.append(
             "<defs>"
             f'<linearGradient id="activityFill" x1="0" y1="0" x2="0" y2="1">'
-            f'<stop offset="0%" stop-color="{theme.accent}" stop-opacity="0.30"/>'
-            f'<stop offset="100%" stop-color="{theme.accent}" stop-opacity="0.02"/>'
+            f'<stop offset="0%" stop-color="{theme.accent}" stop-opacity="0.45"/>'
+            f'<stop offset="100%" stop-color="{theme.accent}" stop-opacity="0.04"/>'
             "</linearGradient>"
             "</defs>"
         )
@@ -562,20 +565,37 @@ def render_activity_svg(
             f'stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
         )
 
-        for index, ((x, y), item) in enumerate(zip(points, monthly)):
+        peak = max(item["count"] for item in monthly)
+
+        for (x, y), item in zip(points, monthly):
+            is_peak = item["count"] == peak and peak > 0
             svg.append(
-                f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" '
-                f'fill="{theme.background}" stroke="{theme.accent}" stroke-width="2"/>'
-            )
-            svg.append(
+                f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{5 if is_peak else 3.5}" '
+                f'fill="{theme.accent if is_peak else theme.background}" '
+                f'stroke="{theme.accent}" stroke-width="2">'
                 f"<title>{escape(item['label'])}: {item['count']} contributions</title>"
+                "</circle>"
             )
+            # Values that barely register against the peak add noise rather than
+            # information, so only label the months that carry the shape.
+            if item["count"] and item["count"] >= peak * 0.05:
+                svg.append(
+                    svg_text(
+                        x,
+                        y - 13,
+                        f"{item['count']:,}",
+                        size=11,
+                        fill=theme.title if is_peak else theme.text,
+                        weight=700 if is_peak else 600,
+                        anchor="middle",
+                    )
+                )
             svg.append(
                 svg_text(
                     x,
                     chart_bottom + 24,
                     item["label"],
-                    size=10,
+                    size=11,
                     fill=theme.muted,
                     anchor="middle",
                 )
@@ -584,7 +604,9 @@ def render_activity_svg(
     footer = "Public activity"
     if restricted:
         footer += f" · {restricted:,} private contributions are hidden"
-    svg.append(svg_text(28, 368, footer, size=11, fill=theme.muted))
+    svg.append(
+        svg_text(chart_right, 372, footer, size=11, fill=theme.muted, anchor="end")
+    )
     svg.append("</svg>")
     return "\n".join(svg)
 

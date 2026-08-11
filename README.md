@@ -4,19 +4,19 @@
 
 ```text
 
-┌─ ykwada@tokyo ────────────────────────────────────┐
-│                                                   │
-│  $ whoami                                         │
-│  Y. Wada - System & Data Engineer @ Tokyo         │
-│                                                   │
-│  $ cat stack.txt                                  │
-│  Python  SQL  AWS  ETL  Data Modeling             │
-│                                                   │
-│  $ ls ~/work                                      │
-│  data-pipelines/  bi-dashboards/  etl-workflows/  │
-│                                                   │
-│  $ _                                              │
-└───────────────────────────────────────────────────┘
+┌─ ykwada@tokyo ───────────────────────────────────────────────────────────┐
+│                                                                          │
+│  $ whoami                                                                │
+│  Y. Wada - System & Data Engineer @ Tokyo                                │
+│                                                                          │
+│  $ cat stack.txt                                                         │
+│  Python  SQL  AWS  ETL  Data Modeling                                    │
+│                                                                          │
+│  $ ls ~/work                                                             │
+│  data-pipelines/  bi-dashboards/  etl-workflows/                         │
+│                                                                          │
+│  $ _                                                                     │
+└──────────────────────────────────────────────────────────────────────────┘
 
 ```
 
