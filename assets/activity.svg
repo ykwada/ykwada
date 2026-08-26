@@ -24,8 +24,8 @@
 <line x1="48" y1="158.0" x2="732" y2="158.0" stroke="#39414d" stroke-width="1" stroke-dasharray="3 4"/>
 <text x="38.0" y="162.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8b949e" text-anchor="end">100</text>
 <defs><linearGradient id="activityFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#58a6ff" stop-opacity="0.45"/><stop offset="100%" stop-color="#58a6ff" stop-opacity="0.04"/></linearGradient></defs>
-<path d="M 48.0 328.0 L 48.0 266.8 L 110.2 266.8 L 172.4 285.5 L 234.5 326.3 L 296.7 328.0 L 358.9 328.0 L 421.1 328.0 L 483.3 328.0 L 545.5 328.0 L 607.6 290.6 L 669.8 166.5 L 732.0 183.5 L 732.0 328.0 Z" fill="url(#activityFill)"/>
-<path d="M 48.0 266.8 L 110.2 266.8 L 172.4 285.5 L 234.5 326.3 L 296.7 328.0 L 358.9 328.0 L 421.1 328.0 L 483.3 328.0 L 545.5 328.0 L 607.6 290.6 L 669.8 166.5 L 732.0 183.5" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 48.0 328.0 L 48.0 266.8 L 110.2 266.8 L 172.4 285.5 L 234.5 326.3 L 296.7 328.0 L 358.9 328.0 L 421.1 328.0 L 483.3 328.0 L 545.5 328.0 L 607.6 290.6 L 669.8 166.5 L 732.0 181.8 L 732.0 328.0 Z" fill="url(#activityFill)"/>
+<path d="M 48.0 266.8 L 110.2 266.8 L 172.4 285.5 L 234.5 326.3 L 296.7 328.0 L 358.9 328.0 L 421.1 328.0 L 483.3 328.0 L 545.5 328.0 L 607.6 290.6 L 669.8 166.5 L 732.0 181.8" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="48.0" cy="266.8" r="4" fill="#0d1117" stroke="#58a6ff" stroke-width="2"><title>Sep: 36 contributions</title></circle>
 <text x="48.0" y="352.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#8b949e" text-anchor="middle">Sep</text>
 <circle cx="110.2" cy="266.8" r="4" fill="#0d1117" stroke="#58a6ff" stroke-width="2"><title>Oct: 36 contributions</title></circle>
@@ -48,7 +48,7 @@
 <text x="607.6" y="352.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#8b949e" text-anchor="middle">Jun</text>
 <circle cx="669.8" cy="166.5" r="4" fill="#0d1117" stroke="#58a6ff" stroke-width="2"><title>Jul: 95 contributions</title></circle>
 <text x="669.8" y="352.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#8b949e" text-anchor="middle">Jul</text>
-<circle cx="732.0" cy="183.5" r="4" fill="#0d1117" stroke="#58a6ff" stroke-width="2"><title>Aug: 85 contributions</title></circle>
+<circle cx="732.0" cy="181.8" r="4" fill="#0d1117" stroke="#58a6ff" stroke-width="2"><title>Aug: 86 contributions</title></circle>
 <text x="732.0" y="352.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#8b949e" text-anchor="middle">Aug</text>
 <text x="732.0" y="372.0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#8b949e" text-anchor="end">Public activity</text>
 </svg>
