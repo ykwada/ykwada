@@ -37,10 +37,6 @@
 </p> -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/stack.svg?v=3" width="100%" alt="Code Distribution"/>
-</p>
-
-<p align="center">
   <img src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/activity.svg?v=3" width="100%" alt="GitHub Activity"/>
 </p>
 
