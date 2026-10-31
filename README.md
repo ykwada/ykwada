@@ -37,7 +37,15 @@
 </p> -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ykwada/ykwada/main/assets/activity.svg?v=3" width="100%" alt="GitHub Activity"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ykwada&theme=prussian" width="100%" alt="Profile Details"/>
+</p>
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ykwada&theme=prussian&exclude=HTML,CSS,Shell&exclude_repos=ykwada" width="49%" alt="Top Languages by Repo"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ykwada&theme=prussian&exclude=HTML,CSS,Shell&exclude_repos=ykwada" width="49%" alt="Top Languages by Commit"/>
+</p>
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ykwada&theme=prussian" width="49%" alt="Stats"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ykwada&theme=prussian&timeZone=Asia/Tokyo" width="49%" alt="Commits per Hour"/>
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
