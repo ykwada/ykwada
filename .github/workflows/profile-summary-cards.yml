@@ -14,12 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Fork of vn7n24fzkq/github-profile-summary-cards with the
-      # INCLUDE_PRIVATE_CONTRIBUTIONS input (branch feat/include-private-contributions),
-      # pinned to a commit so the executed code cannot change under us.
-      - uses: ykwada/github-profile-summary-cards@1b02d0c5ecf8622d3461b82561c4bde925d3717c
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           # PAT stored as a repository secret. Never hardcode a token here.
+          # Classic PAT needs repo + read:user (+ read:org for org repos); without
+          # read:user, private commits are reported only as restrictedContributionsCount
+          # and the Stats card's Total Commits stays public-only.
           GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
@@ -29,4 +29,3 @@ jobs:
           EXCLUDE: HTML,CSS,Shell
           EXCLUDE_REPOS: ykwada
           AUTO_PUSH: true
-          INCLUDE_PRIVATE_CONTRIBUTIONS: true
