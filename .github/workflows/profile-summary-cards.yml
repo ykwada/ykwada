@@ -14,7 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: vn7n24fzkq/github-profile-summary-cards@release
+      # Fork of vn7n24fzkq/github-profile-summary-cards with the
+      # INCLUDE_PRIVATE_CONTRIBUTIONS input (branch feat/include-private-contributions),
+      # pinned to a commit so the executed code cannot change under us.
+      - uses: ykwada/github-profile-summary-cards@1b02d0c5ecf8622d3461b82561c4bde925d3717c
         env:
           # PAT stored as a repository secret. Never hardcode a token here.
           GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
@@ -26,3 +29,4 @@ jobs:
           EXCLUDE: HTML,CSS,Shell
           EXCLUDE_REPOS: ykwada
           AUTO_PUSH: true
+          INCLUDE_PRIVATE_CONTRIBUTIONS: true
